@@ -2,7 +2,7 @@
 
 #kaanYENİYOL
 
-import utils
+
 from _winreg import *
 import time
 
@@ -24,7 +24,7 @@ while True:
         key = OpenKey(HKEY_LOCAL_MACHINE, list[x])
         print("USB delil konumu: "),
         print(list[x])
-        c = QueryValueEx(key, "FriendlyName") #varsayilan deger ise " " ekle
+        c = QueryValueEx(key, "HardwareID") #VEYA FriendlyName varsayilan deger ise " " ekle
         print("                   USB NAME: {} ".format(c[0])),
         d = QueryValueEx(key, "ContainerID") #varsayilan deger ise " " ekle
         print("ID: {} ".format(d[0]))
